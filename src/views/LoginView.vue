@@ -80,8 +80,8 @@ const handleLogin = () => {
   // 对密码进行MD5加密
   const encryptedPassword = md5(formState.password)
   
-  // 调用登录API
-  axios.post('http://127.0.0.1:8011/csServer/v1/agile-auth/login', {
+  // 调用登录API - 使用代理解决跨域问题
+  axios.post('/api/csServer/v1/agile-auth/login', {
     username: formState.username,
     password: encryptedPassword
   }, {

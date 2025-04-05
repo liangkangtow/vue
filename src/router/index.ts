@@ -16,6 +16,11 @@ const router = createRouter({
       path: '/home',
       name: 'home',
       component: () => import('../views/HomeView.vue')
+    },
+    {
+      path: '/video',
+      name: 'video',
+      component: () => import('../views/VideoView.vue')
     }
   ]
 })
